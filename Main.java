@@ -149,12 +149,18 @@ public class Main {
             }
         }
         System.out.println("\nExecution finished");
-        System.out.println("Final Score: " + correct + " / " + total + " points");
+        System.out.println("Final Score: " + correct + " / " + total + " points\n");
         if (totalTaken < Long.MAX_VALUE) {
           System.out.printf("Total time taken: %.3f seconds\n", totalTaken / 1000.0);
         }
         else {
           System.out.println("Total time taken: Indefinite");
+          System.out.println("Maximum runtime on single test case: Indefinite\n");
+          System.out.println("If you are sure you have the correct solution, please try rejudging your code.");
+          System.out.println("(The judge can be very lazy sometimes and takes too long to execute a case)");
+        }
+        if (maxRuntime < Long.MAX_VALUE) {
+          System.out.printf("Maximum runtime on single test case: %.3f seconds\n", maxRuntime / 1000.0);
         }
     }
     public static final String GREEN = "\u001B[32m";
